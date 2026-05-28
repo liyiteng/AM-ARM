@@ -82,25 +82,49 @@ If you already have a working LeRobot environment and prefer to stay on the upst
 
 **Step 1 — Register STS3095 in the motor table**
 
-In `lerobot/common/robot_devices/motors/feetech.py`, add an entry for `sts3095` alongside the existing `sts3215` entry:
+In `lerobot/src/lerobot/motors/feetech/tables.py`, add `"sts3095"` to each of the five model dictionaries. STS3095 is STS-series (same protocol as STS3215), so the values mirror that motor:
 
 ```python
-# Model, baud rate, resolution, operating range (degrees)
-"sts3095": (SCS_SERIES, 1_000_000, 4096, 360),
+MODEL_CONTROL_TABLE = {
+    ...
+    "sts3095": STS_SMS_SERIES_CONTROL_TABLE,   # add this
+}
+
+MODEL_RESOLUTION = {
+    ...
+    "sts3095": 4096,                            # add this
+}
+
+MODEL_BAUDRATE_TABLE = {
+    ...
+    "sts3095": STS_SMS_SERIES_BAUDRATE_TABLE,   # add this
+}
+
+MODEL_ENCODING_TABLE = {
+    ...
+    "sts3095": STS_SMS_SERIES_ENCODINGS_TABLE,  # add this
+}
+
+MODEL_PROTOCOL = {
+    ...
+    "sts3095": 0,                               # add this (STS series = protocol 0)
+}
 ```
 
-**Step 2 — Update the follower config**
+**Step 2 — Update the follower robot definition**
 
-In `lerobot/configs/robot/so100_follower.yaml` (or your custom follower config), replace the motor model for the three high-torque joints (shoulder, elbow, wrist) from `sts3215` to `sts3095`:
+In `lerobot/src/lerobot/robots/so_follower/so_follower.py`, replace the motor list with the AM-ARM200's 7-motor layout (adds `wrist_yaw` and swaps the three high-torque joints to `sts3095`):
 
-```yaml
-motors:
-  shoulder_pan:  {id: 1, model: sts3095, ...}
-  shoulder_lift: {id: 2, model: sts3095, ...}
-  elbow_flex:    {id: 3, model: sts3095, ...}
-  wrist_flex:    {id: 4, model: sts3215, ...}
-  wrist_roll:    {id: 5, model: sts3215, ...}
-  gripper:       {id: 6, model: sts3215, ...}
+```python
+motors=(
+    ("shoulder_pan",  1, "sts3095", None),
+    ("shoulder_lift", 2, "sts3095", None),
+    ("elbow_flex",    3, "sts3095", None),
+    ("wrist_flex",    4, "sts3215", None),
+    ("wrist_yaw",     5, "sts3215", None),
+    ("wrist_roll",    6, "sts3215", None),
+    ("gripper",       7, "sts3215", MotorNormMode.RANGE_0_100),
+),
 ```
 
 After these two edits, the rest of the LeRobot workflow (calibration, teleop, recording, training) is identical to the standard SO-ARM100 setup.
