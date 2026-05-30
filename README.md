@@ -2,7 +2,12 @@
 
 [![Join our Discord](https://img.shields.io/badge/Discord-Join%20chat-blue)](https://discord.gg/CacMUBaFgJ) [![Follow on X](https://img.shields.io/twitter/follow/liyitengx?style=social)](https://x.com/liyitengx)
 
-AM-ARM200 extends the SO-ARM100 design philosophy — an open-source 6+1DoF robotic arm with 1 kg payload, fully 3D-printable and built for embodied AI research. ~$240 follower / ~$140 leader / ~$380 full teleoperation kit.
+
+AM-ARM200 is a low-cost, open-source 6+1 DoF robotic arm with a 1 kg payload, fully 3D-printable and built for embodied AI research.
+
+Built on the open-source philosophy of SO-ARM100, it brings the platform into a new capability class while remaining easy to reproduce and affordable.
+
+~$240 follower / ~$140 leader / ~$380 full teleoperation kit.
 
 > Looking for the complete AlohaMini robot? See the [AlohaMini repository](https://github.com/liyiteng/alohamini).
 
@@ -12,11 +17,11 @@ AM-ARM200 extends the SO-ARM100 design philosophy — an open-source 6+1DoF robo
 
 ### What Makes It Different
 
-- **6+1 DoF with 1 kg payload** — more capable than most low-cost arms at this price point
-- **Long reach** — designed to cover real table-top manipulation distances
+- **6+1 DoF, 1 kg payload, 52 cm reach** — a capability class rarely seen at this price point
 - **LeRobot & AlohaMini compatible** — works out of the box with the most popular open-source robot learning stack
 - **Fully 3D-printable** — print and assemble at home in ~60 minutes
-- **Low cost** — full teleoperation kit under $380
+- **Open source** — CAD, firmware, and software included
+- **Low cost** — ~$240 follower / ~$140 leader / ~$380 full teleoperation kit
 
 ## Gallery
 
