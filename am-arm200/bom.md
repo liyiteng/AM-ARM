@@ -43,4 +43,4 @@ Existing SO100/SO101 users can smoothly upgrade to AM-ARM200 by simply adding th
 |------|---------------|----:|----------------|----------|----------------|----------|
 | USB camera | 720p, 36×36 mm form factor | 1 | — | Amazon | ¥125 | [Taobao](https://item.taobao.com/item.htm?id=666278411821) |
 | M2×12 Phillips screw | For camera mounts | 2 | — | — | — | — |
-| Bearing | 12×18×4 mm (ID × OD × W) | 1 | $0.30 | [Amazon](https://www.amazon.com/XIKE-6701-2RS-Bearings-12x18x4mm-Pre-Lubricated/dp/B09D2RQ4Y1) | ¥6 | [Tmall](https://detail.tmall.com/item.htm?id=824704356695) |
+| Bearing | 12×18×4 mm (ID × OD × W) | 2 | $0.30 | [Amazon](https://www.amazon.com/XIKE-6701-2RS-Bearings-12x18x4mm-Pre-Lubricated/dp/B09D2RQ4Y1) | ¥6 | [Tmall](https://detail.tmall.com/item.htm?id=824704356695) |
