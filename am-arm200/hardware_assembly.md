@@ -4,12 +4,11 @@ This guide covers the AM-ARM200 follower arm assembly. Install all screws loosel
 
 ## Servo ID Setup
 
-Before assembly, assign the correct ID to each servo. We recommend using the [`lerobot_alohamini`](https://github.com/liyitenga/lerobot_alohamini) debug command.
+Before assembly, assign the correct ID to each servo. We recommend using the [`lerobot_alohamini`](https://github.com/liyiteng/lerobot_alohamini)debug command.
 
 ### Option 1: lerobot_alohamini (Recommended)
 
-Set the servo ID with the [`lerobot_alohamini`](https://github.com/liyitenga/lerobot_alohamini) debug command:
-
+Set the servo ID with the `lerobot_alohamini` [debug command](https://github.com/liyiteng/lerobot_alohamini/blob/main/examples/debug):
 ```bash
 python examples/debug/motors.py configure_motor_id \
   --id 1 \
@@ -46,7 +45,7 @@ Use the following layout as the reference for servo IDs 1-7 on the leader arm.
 
 ![Leader servo ID layout](media/assembly/leader/20-servo-id-layout.jpg)
 
-The 5V 1/147 servos are configured for multi-turn mode at the factory. Set the servo phase to `12` to reset them to single-turn mode:
+The 5V 1/147 servos are configured for multi-turn mode at the factory. Using the same `lerobot_alohamini` [debug command](https://github.com/liyiteng/lerobot_alohamini/blob/main/examples/debug) setup, set the servo phase to `12` to reset them to single-turn mode:
 
 ```bash
 python examples/debug/motors.py configure_motor_phase \
@@ -91,6 +90,7 @@ Install the wrist servo, bearing, and wrist cover.
 
 ![Leader wrist servo installed](media/assembly/leader/11-wrist-servo-installed.jpg)
 
+Install the pin and bearing. Alternatively, use the no-bearing version: `O_L_J5_Pin_No_Bearing.stl`.
 ![Leader bearing and wrist parts](media/assembly/leader/12-bearing-and-wrist-parts.jpg)
 
 ![Leader wrist bearing installed](media/assembly/leader/13-wrist-bearing-installed.jpg)
@@ -155,6 +155,7 @@ Mount the shoulder servos and install the shoulder link.
 Install the bearing and spacer, then assemble the elbow servo and printed housing.
 
 ![Bearing and spacer](media/assembly/follower/10-bearing-and-spacer.jpg)
+Install the pin and bearing. Alternatively, use the no-bearing version: `OB_F_J5_Pin_No_Bearing.stl`.
 
 ![Install the bearing spacer](media/assembly/follower/11-install-bearing-spacer.jpg)
 
