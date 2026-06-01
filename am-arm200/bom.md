@@ -9,7 +9,7 @@ Existing SO100/SO101 users can smoothly upgrade to AM-ARM200 by simply adding th
 | Item | Model / Notes | Qty | Unit Cost (US/EU) | Buy (US) | Unit Cost (CN) | Buy (CN) |
 |------|---------------|----:|-------------------|----------|----------------|----------|
 | Servo motor | Feetech STS3215 (12V 1/345) | 4 | $15.97 | [Alibaba](https://www.alibaba.com/product-detail/Lerobot-360-Degree-Smart-Servo-for_1601563310522.html?spm=a2700.details.popular_products.6.75c92868FRtQVW) | ¥110 | [Taobao](https://e.tb.cn/h.64H9u3maGWzIp5Q?tk=T5liexkG6Yz) |
-| Servo motor | Feetech STS3095 (12V 1/345) | 3 | $50.37 | [Alibaba](https://www.alibaba.com/product-detail/FEETECH-STS3095-12V-95KG-servo-AI_1601045980686.html?spm=a2700.micro_product_manager.0.0.5d083e5fKK9nCF) | ¥345 | [Taobao](https://item.taobao.com/item.htm?abbucket=18&id=764857479703) |
+| Servo motor | Feetech STS3095 (12V 1/345) | 3 | $50.37 | [Alibaba](https://www.alibaba.com/product-detail/FEETECH-STS3095-12V-95KG-servo-AI_1601045980686.html?spm=a2700.micro_product_manager.0.0.5d083e5fKK9nCF) | ¥345 | [Taobao](https://item.taobao.com/item.htm?id=766143777848&skuId=6096958421597) |
 | Hex socket screw | M3×10 | 74 | — | — | ¥6 | [Taobao](https://e.tb.cn/h.R0nMFj8y9riNyJl?tk=HNii5rHz4NJ) |
 | Heat-set insert | M3×5×4 | 4 | — | Amazon | ¥5 | [Taobao](https://item.taobao.com/item.htm?id=809241671998) |
 | Servo extension cable | SCS 3-pin, 26 cm | 6 | $0.43 | [AliExpress](https://www.aliexpress.com/item/1005008074862037.html) | ¥3 | [Taobao](https://item.taobao.com/item.htm?id=616460581906) |
