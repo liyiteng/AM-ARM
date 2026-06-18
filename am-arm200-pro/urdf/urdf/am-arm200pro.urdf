@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="am-arm200pro">
+  <link
+    name="left_Base">
+    <inertial>
+      <origin
+        xyz="4.0617631907186E-07 0.0110959078409039 0.0236098218621581"
+        rpy="0 0 0" />
+      <mass
+        value="0.337097990349248" />
+      <inertia
+        ixx="0.000303853452182546"
+        ixy="-3.10725283219752E-09"
+        ixz="3.58021330358592E-10"
+        iyy="0.000403928168295908"
+        iyz="-4.8058629470128E-06"
+        izz="0.000562018961870091" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="left_Rotation_Pitch">
+    <inertial>
+      <origin
+        xyz="0.00386596201421711 -0.0138668105342394 0.0175130444101314"
+        rpy="0 0 0" />
+      <mass
+        value="0.0317343546239167" />
+      <inertia
+        ixx="1.17593989685845E-05"
+        ixy="5.33473261341667E-11"
+        ixz="-1.16394634931486E-08"
+        iyy="1.07148546551247E-05"
+        iyz="-7.69540157839114E-10"
+        izz="1.10186525393721E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Rotation_Pitch.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Rotation_Pitch.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_pan"
+    type="revolute">
+    <origin
+      xyz="0 0 0.062556"
+      rpy="0 0 0" />
+    <parent
+      link="left_Base" />
+    <child
+      link="left_Rotation_Pitch" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_Upper_Arm">
+    <inertial>
+      <origin
+        xyz="-0.00503066993187069 0.0711598496257564 0.0014399982311204"
+        rpy="0 0 0" />
+      <mass
+        value="0.26488994104406" />
+      <inertia
+        ixx="0.000669893079441904"
+        ixy="4.05289537389169E-06"
+        ixz="-2.04604246519749E-07"
+        iyy="0.000223738977833996"
+        iyz="-1.24031242310942E-06"
+        izz="0.000502976167412308" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Upper_Arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Upper_Arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_shoulder_lift"
+    type="revolute">
+    <origin
+      xyz="0 -0.029035 0.058223"
+      rpy="0 1.5708 0" />
+    <parent
+      link="left_Rotation_Pitch" />
+    <child
+      link="left_Upper_Arm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_Lower_Arm">
+    <inertial>
+      <origin
+        xyz="0.00411591741430284 -0.0804551152818728 -0.00101438996817399"
+        rpy="0 0 0" />
+      <mass
+        value="0.270278659255739" />
+      <inertia
+        ixx="0.000836242352707801"
+        ixy="7.56437972650344E-06"
+        ixz="1.34564062040202E-07"
+        iyy="0.000207983856957914"
+        iyz="-3.81626892414451E-06"
+        izz="0.000676986981489906" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Lower_Arm.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Lower_Arm.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_elbow_flex"
+    type="revolute">
+    <origin
+      xyz="-0.041170749065642 0.128514358904429 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_Upper_Arm" />
+    <child
+      link="left_Lower_Arm" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_Wrist_Pitch_Roll">
+    <inertial>
+      <origin
+        xyz="-0.000731389938048943 -0.0147937425780408 -0.000718021549161701"
+        rpy="0 0 0" />
+      <mass
+        value="0.0304496388844339" />
+      <inertia
+        ixx="1.45088548152824E-05"
+        ixy="-2.43324156971068E-07"
+        ixz="1.64696078336802E-08"
+        iyy="1.12953091793792E-05"
+        iyz="5.07349732865443E-07"
+        izz="8.22489621686965E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Wrist_Pitch_Roll.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Wrist_Pitch_Roll.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_flex"
+    type="revolute">
+    <origin
+      xyz="0.00320470342874501 -0.198428485161884 0"
+      rpy="0 0 0" />
+    <parent
+      link="left_Lower_Arm" />
+    <child
+      link="left_Wrist_Pitch_Roll" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_wrist_yaw">
+    <inertial>
+      <origin
+        xyz="-0.000117813013694405 0.0274410929028983 0.00965024408451137"
+        rpy="0 0 0" />
+      <mass
+        value="0.105279930567343" />
+      <inertia
+        ixx="7.40447530125397E-05"
+        ixy="4.80902969527966E-08"
+        ixz="-4.93467864935505E-08"
+        iyy="7.09874436497997E-05"
+        iyz="1.85903139644103E-05"
+        izz="4.53356638498229E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_wrist_yaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_wrist_yaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_yaw_joint"
+    type="revolute">
+    <origin
+      xyz="-0.000915704840558335 -0.0281295188165527 -0.000966380385420608"
+      rpy="3.14159257760848 1.5707963267949 0" />
+    <parent
+      link="left_Wrist_Pitch_Roll" />
+    <child
+      link="left_wrist_yaw" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_Fixed_Jaw">
+    <inertial>
+      <origin
+        xyz="-0.009788697448233 -0.00779183152484197 0.024772169015474"
+        rpy="0 0 0" />
+      <mass
+        value="0.0820209259289823" />
+      <inertia
+        ixx="5.46968854593741E-05"
+        ixy="5.64423288927459E-07"
+        ixz="9.06519097272961E-06"
+        iyy="5.64802134373342E-05"
+        iyz="-1.2174573644286E-06"
+        izz="3.02312706629824E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Fixed_Jaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Fixed_Jaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wrist_roll"
+    type="revolute">
+    <origin
+      xyz="0 0.0609927440831215 -0.0242385261486938"
+      rpy="-1.57079640339869 0 0" />
+    <parent
+      link="left_wrist_yaw" />
+    <child
+      link="left_Fixed_Jaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_Moving_Jaw">
+    <inertial>
+      <origin
+        xyz="-0.00191495762777895 -0.0312333699899828 0.00285164949308649"
+        rpy="0 0 0" />
+      <mass
+        value="0.0288040630212379" />
+      <inertia
+        ixx="2.05481922687796E-05"
+        ixy="-6.04064417680361E-07"
+        ixz="-7.43538618229523E-10"
+        iyy="5.96002371208446E-06"
+        iyz="6.05082703416724E-09"
+        izz="1.58458054447954E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Moving_Jaw.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_Moving_Jaw.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_gripper"
+    type="revolute">
+    <origin
+      xyz="0.02021444438295 0.0033063194616967 0.021614179864005"
+      rpy="-1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="left_Fixed_Jaw" />
+    <child
+      link="left_Moving_Jaw" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_camera">
+    <inertial>
+      <origin
+        xyz="-0.00363152315829868 0.157740718172186 -0.105680865715653"
+        rpy="0 0 0" />
+      <mass
+        value="1.15055846064821" />
+      <inertia
+        ixx="0.0142106811421457"
+        ixy="2.30316612860149E-05"
+        ixz="-1.97427153101731E-05"
+        iyy="0.00849398423463724"
+        iyz="0.00342876254777693"
+        izz="0.00733383401076117" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://am-arm200pro/am-arm200pro-meshes/left_camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_camera_joint8"
+    type="fixed">
+    <origin
+      xyz="0.00251113132165192 -0.071341148343549 -0.00430701398654823"
+      rpy="-0.436362675423314 0 0" />
+    <parent
+      link="left_Fixed_Jaw" />
+    <child
+      link="left_camera" />
+    <axis
+      xyz="0 0.906294954903738 0.422645779247862" />
+  </joint>
+</robot>
